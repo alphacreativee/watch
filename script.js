@@ -13,7 +13,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 camera.position.z = 25;
 
-const renderer = new THREE.WebGLRenderer({ alpha: true });
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById("container-3d").appendChild(renderer.domElement);
 
@@ -107,7 +107,7 @@ const modelMove = () => {
   let currentSection;
   sections.forEach((section) => {
     const rect = section.getBoundingClientRect();
-    if (rect.top <= window.innerHeight / 3) {
+    if (rect.top <= window.innerHeight / 2) {
       currentSection = section.id;
     }
   });
@@ -137,6 +137,7 @@ window.addEventListener("scroll", () => {
     modelMove();
   }
 });
+
 const reRender3d = () => {
   requestAnimationFrame(reRender3d);
   renderer.render(scene, camera);
