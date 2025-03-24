@@ -1,0 +1,116 @@
+@import url("https://fonts.cdnfonts.com/css/devil-breeze");
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1b1b1b;
+  color: #fff;
+  font-family: "Syne", sans-serif;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(20px);
+  background-color: #1b1b1b11;
+  /* background-image: repeating-linear-gradient(
+    to right,
+    transparent 0 500px,
+    #eee1 500px 501px
+  ); */
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+}
+.header-logo {
+  font-family: "devil breeze";
+}
+.header-btn a {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
+}
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.banner-title .title {
+  font-size: 176px;
+  font-family: "devil breeze";
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+.banner-title .title::before {
+  content: attr(data-before);
+  position: absolute;
+  top: 0;
+  inset: 120px 0 0 0;
+  z-index: -1;
+  color: rgba(255, 255, 255, 0.1);
+}
+.mx-content {
+  max-width: 1440px;
+  width: 100%;
+  padding: 80px;
+}
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.info-container .number {
+  font-family: "devil breeze";
+  font-size: 156px;
+}
+.info-container .desc .title {
+  font-family: "devil breeze";
+  font-size: 56px;
+  margin-bottom: 40px;
+}
+.desgin-info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 80px;
+}
+.desgin-info .title {
+  font-size: 56px;
+  font-family: "devil breeze";
+  font-weight: 400;
+  text-align: center;
+}
+#container-3d {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.about-container .title {
+  font-size: 176px;
+  font-family: "devil breeze";
+  font-weight: bold;
+  text-align: center;
+}
